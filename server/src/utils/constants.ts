@@ -1,0 +1,4 @@
+export const QUEUE_NAMES = {
+  SEND_MESSAGE: "SEND_MESSAGE",
+  GET_MOVIES: "GET_MOVIES",
+}

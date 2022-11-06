@@ -1,0 +1,55 @@
+version: '3.0'
+
+services:
+  web:
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    volumes:
+      - ./web/node_modules:/app/web/node_modules
+      - ./web/src:/app/web/src
+    depends_on:
+      - server
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    ports:
+      - 8000:8000
+    environment:
+      - PORT=8000
+      - ES_HOST=http://elasticsearch:9200
+      - RBMQ_HOST=amqp://rabbitmq
+    volumes:
+      - ./server/node_modules:/app/server/node_modules
+      - ./server/src:/app/server/src
+    depends_on:
+      elasticsearch:
+        condition: service_healthy
+  rabbitmq:
+    image: rabbitmq:management
+    ports:
+      - 5672:5672
+      - 15672:15672
+  elasticsearch:
+    image: elasticsearch:8.2.2
+    environment:
+      - discovery.type=single-node
+      - ES_JAVA_OPTS=-Xms1g -Xmx1g
+      - xpack.security.enabled=false
+    ports:
+      - 9200:9200
+      - 9300:9300
+    volumes:
+      - es_data:/usr/share/elasticsearch/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9200"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+volumes:
+  es_data:
+    driver: local

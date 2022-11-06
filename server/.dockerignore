@@ -1,0 +1,7 @@
+node_modules
+.eslintrc
+.git
+Dockerfile
+.dockerignore
+.vscode
+README.md

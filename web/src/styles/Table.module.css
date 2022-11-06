@@ -1,0 +1,21 @@
+.table {
+  width: 100%;
+}
+
+.table > table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table > table th,
+.table > table td {
+  text-align: left;
+  padding: 10px 20px;
+}
+
+.table > table th {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  color: #cacaca;
+}
