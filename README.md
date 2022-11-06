@@ -1,15 +1,16 @@
-<img src="https://img.shields.io/badge/-ReactJS-61DAFB?logo=React&logoColor=303030&style={STYLE}" alt="badge sample"/>
-<img src="https://img.shields.io/badge/-NodeJS-339933?logo=Node.js&logoColor=fff&style={STYLE}" alt="badge sample"/>
-<img src="https://img.shields.io/badge/-NextJS-000000?logo=Next.js&logoColor=fff&style={STYLE}" alt="badge sample"/>
-<img src="https://img.shields.io/badge/-ExpressJS-000000?logo=Express&logoColor=fff&style={STYLE}" alt="badge sample"/>
-<img src="https://img.shields.io/badge/-Axios-5A29E4?logo=Axios&logoColor=fff&style={STYLE}" alt="badge sample"/>
-<img src="https://img.shields.io/badge/-React Query-FF4154?logo=React Query&logoColor=fff&style={STYLE}" alt="badge sample"/>
-<img src="https://img.shields.io/badge/-Redux-764ABC?logo=Redux&logoColor=fff&style={STYLE}" alt="badge sample"/>
-<img src="https://img.shields.io/badge/-TypeScript-3178C6?logo=TypeScript&logoColor=fff&style={STYLE}" alt="badge sample"/>
-<img src="https://img.shields.io/badge/-Docker-2496ED?logo=Docker&logoColor=fff&style={STYLE}" alt="badge sample"/>
-<img src="https://img.shields.io/badge/-Elasticsearch-005571?logo=Elasticsearch&logoColor=fff&style={STYLE}" alt="badge sample"/>
-<img src="https://img.shields.io/badge/-RabbitMQ-FF6600?logo=RabbitMQ&logoColor=fff&style={STYLE}" alt="badge sample"/>
-
+<p float="left">
+  <img src="https://img.shields.io/badge/-ReactJS-61DAFB?logo=React&logoColor=303030&style={STYLE}" alt="badge sample"/>
+  <img src="https://img.shields.io/badge/-NodeJS-339933?logo=Node.js&logoColor=fff&style={STYLE}" alt="badge sample"/>
+  <img src="https://img.shields.io/badge/-NextJS-000000?logo=Next.js&logoColor=fff&style={STYLE}" alt="badge sample"/>
+  <img src="https://img.shields.io/badge/-ExpressJS-000000?logo=Express&logoColor=fff&style={STYLE}" alt="badge sample"/>
+  <img src="https://img.shields.io/badge/-Axios-5A29E4?logo=Axios&logoColor=fff&style={STYLE}" alt="badge sample"/>
+  <img src="https://img.shields.io/badge/-React Query-FF4154?logo=React Query&logoColor=fff&style={STYLE}" alt="badge sample"/>
+  <img src="https://img.shields.io/badge/-Redux-764ABC?logo=Redux&logoColor=fff&style={STYLE}" alt="badge sample"/>
+  <img src="https://img.shields.io/badge/-TypeScript-3178C6?logo=TypeScript&logoColor=fff&style={STYLE}" alt="badge sample"/>
+  <img src="https://img.shields.io/badge/-Docker-2496ED?logo=Docker&logoColor=fff&style={STYLE}" alt="badge sample"/>
+  <img src="https://img.shields.io/badge/-Elasticsearch-005571?logo=Elasticsearch&logoColor=fff&style={STYLE}" alt="badge sample"/>
+  <img src="https://img.shields.io/badge/-RabbitMQ-FF6600?logo=RabbitMQ&logoColor=fff&style={STYLE}" alt="badge sample"/>
+</p>
 
 ## Movie Search App
 
