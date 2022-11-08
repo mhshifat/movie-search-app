@@ -55,24 +55,32 @@ export const moviesService = {
     limit: number;
     search: string;
   }) {
-    const { hits: { hits, total } } = await esClient.search({
-      index: "movies",
-      size: limit,
-      from: (limit * page) - limit,
-      ...search?{
-        query: {
-          query_string: {
-            default_field: "title",
-            query: search
+    try {
+      const { hits: { hits, total } } = await esClient.search({
+        index: "movies",
+        size: limit,
+        from: (limit * page) - limit,
+        ...search?{
+          query: {
+            query_string: {
+              default_field: "title",
+              query: search
+            }
           }
-        }
-      }:{}
-    });
-    return {
-      results: hits.map(({ _source }) => _source),
-      total_results: (total as SearchTotalHits)?.value,
-      total_pages: Math.ceil(parseInt((total as SearchTotalHits)?.value as unknown as string) / limit)  
-    };
+        }:{}
+      });
+      return {
+        results: hits.map(({ _source }) => _source),
+        total_results: (total as SearchTotalHits)?.value,
+        total_pages: Math.ceil(parseInt((total as SearchTotalHits)?.value as unknown as string) / limit)  
+      };
+    } catch (err) {
+      return {
+        results: [],
+        total_results: 0,
+        total_pages: 0  
+      };
+    }
   },
   async searchMovies(search: string) {
     const result = await esClient.search({

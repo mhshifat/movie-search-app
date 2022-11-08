@@ -1,4 +1,4 @@
-import { initRbmq } from "./amqplib";
+import { RBMQPublisherIns } from "../utils/publisher";
 import { esClient } from "./elasticsearch";
 import initExpress from "./express";
 
@@ -8,7 +8,8 @@ class Loaders {
     return new Promise((res, rej) => {
       setTimeout(async () => {
         try {
-          const connection = await initRbmq();
+          const connection = await RBMQPublisherIns.getClient();
+          console.log("connection", connection.eventNames());
           console.log("RBMQ connection eatablished!");
           res(connection);
         } catch (err: unknown) {

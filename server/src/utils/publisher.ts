@@ -6,11 +6,16 @@ class RBMQPublisher {
   private client: Connection | null = null;
 
   constructor() {
-    initRbmq().then((conn) => this.client = conn);
+    initRbmq().then((res) => {
+      this.client = res;
+    });
   }
 
-  getClient() {
-    if (!this.client) throw new Error("RabbitMQ connection not found");
+  async getClient() {
+    if (!this.client) return initRbmq().then((conn) => {
+      this.client = conn;
+      return conn;
+    });
     return this.client;
   }
 
