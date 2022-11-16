@@ -24,7 +24,7 @@ services:
       - RBMQ_HOST=amqp://rabbitmq
       - RAPIDAPI_KEY=76aa05648dmshadfed7393c44871p1aba25jsn9b3891a47a68
       - RAPIDAPI_HOST=movies-app1.p.rapidapi.com
-      - SERVER_URI=http://localhost:8000
+      - SERVER_URI=https://server-mhshifat.cloud.okteto.net
     volumes:
       - ./server/node_modules:/app/server/node_modules
       - ./server/src:/app/server/src
