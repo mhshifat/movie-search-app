@@ -28,6 +28,7 @@ services:
     volumes:
       - ./server/node_modules:/app/server/node_modules
       - ./server/src:/app/server/src
+    restart: always
     depends_on:
       elasticsearch:
         condition: service_healthy
