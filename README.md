@@ -18,7 +18,7 @@
 
 Movie Search App is an app where you can search from all movies and get their info like genre, release, short description etc.
 
-#### Demo link: https://mhs-dev.netlify.app/
+#### Demo link: https://web-mhshifat.cloud.okteto.net(https://mhs-dev.netlify.app)
 
 ## Project Screen Shot(s)
 
