@@ -12,6 +12,8 @@ services:
       - ./web/src:/app/web/src
     depends_on:
       - server
+    environment:
+      - NEXT_PUBLIC_API_URI=https://server-mhshifat.cloud.okteto.net
   server:
     build:
       context: ./server
