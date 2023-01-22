@@ -39,11 +39,11 @@ export default function Page({ children, contentBodyRef }: PageProps) {
   return (
     <section className={styles.page}>
       <aside className={styles.sidebar}>
-        <div className={styles.logo}>
+        <div className={`${styles.logo} app__logo`}>
           <BiCameraMovie />
         </div>
         <nav className={styles.navs}>
-          <span className={styles.activeNav}>
+          <span className={`${styles.activeNav} app__nav1`}>
             <TbMovie />
           </span>
         </nav>

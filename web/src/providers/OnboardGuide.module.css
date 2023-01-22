@@ -1,0 +1,187 @@
+.onboardGuide {
+  width: auto;
+  position: fixed;
+  top: 500px;
+  left: 500px;
+  z-index: 9999;
+
+  width: 322px;
+  background: #1EBEFE;
+  box-shadow: 0px 16px 18px rgba(77, 77, 77, 0.11);
+  border-radius: 10px;
+  padding: 28px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.onboardGuide small {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 147.69%;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.74);
+  margin: 0;
+  margin-bottom: 6px;
+}
+
+.onboardGuide h3 {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 147.69%;
+  text-align: center;
+  color: #FFFFFF;
+  margin: 0;
+  margin-bottom: 12px;
+}
+
+.onboardGuide p {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 147.69%;
+  text-align: center;
+  color: #FFFFFF;
+  margin: 0;
+  margin-bottom: 12px;
+}
+
+.onboardGuide span svg {
+  cursor: pointer;
+}
+
+.onboardGuide::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  background: #1EBEFE;
+  margin-left: calc(-14px / 2);
+  transform: rotate(45deg);
+}
+
+.guidePos__leftTop::after {
+  left: unset;
+  right: -7px;
+  transform: rotate(45deg);
+  transform-origin: left;
+}
+
+.guidePos__leftCenter::after {
+  top: 50%;
+  left: unset;
+  right: -7px;
+  transform: translateY(-50%) rotate(45deg);
+  transform-origin: center;
+}
+
+.guidePos__leftBottom::after {
+  top: unset;
+  left: unset;
+  bottom: 10px;
+  right: -7px;
+  transform: rotate(45deg);
+  transform-origin: unset;
+  margin-left: 0;
+}
+
+.guidePos__topLeft::after {
+  top: unset;
+  left: 10px;
+  bottom: 0;
+  right: 0;
+  transform: rotate(45deg);
+  transform-origin: left;
+  margin-left: 0;
+}
+
+.guidePos__topCenter::after {
+  top: unset;
+  left: 50%;
+  bottom: 0;
+  right: 0;
+  transform: translateX(-50%) rotate(45deg);
+  transform-origin: left;
+  margin-left: 0;
+}
+
+.guidePos__topRight::after {
+  top: unset;
+  left: unset;
+  bottom: 0;
+  right: 0;
+  transform: translateX(-50%) rotate(45deg);
+  transform-origin: left;
+  margin-left: 0;
+}
+
+.guidePos__rightTop::after {
+  top: 10px;
+  left: 0;
+  bottom: unset;
+  right: unset;
+  transform: rotate(45deg);
+  transform-origin: top;
+  margin-left: 0;
+}
+
+.guidePos__rightCenter::after {
+  top: 50%;
+  left: 0;
+  bottom: unset;
+  right: unset;
+  transform: translateY(-50%) rotate(45deg);
+  transform-origin: top;
+  margin-left: 0;
+}
+
+.guidePos__rightBottom::after {
+  top: unset;
+  left: 0;
+  bottom: 10px;
+  right: unset;
+  transform: rotate(45deg);
+  transform-origin: top;
+  margin-left: 0;
+}
+
+.guidePos__bottomLeft::after {
+  top: 0;
+  left: 10px;
+  bottom: unset;
+  right: unset;
+  transform: rotate(45deg);
+  transform-origin: right;
+  margin-left: 0;
+}
+
+.guidePos__bottomCenter::after {
+  top: 0;
+  left: 50%;
+  bottom: unset;
+  right: unset;
+  transform: translateX(-50%) rotate(45deg);
+  transform-origin: right;
+  margin-left: 0;
+}
+
+.guidePos__bottomRight::after {
+  top: 0;
+  left: unset;
+  bottom: unset;
+  right: 10px;
+  transform: translateX(-50%) rotate(45deg);
+  transform-origin: right;
+  margin-left: 0;
+}

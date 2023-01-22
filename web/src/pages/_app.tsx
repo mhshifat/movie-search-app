@@ -4,6 +4,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { useState } from 'react';
 import { Provider } from 'react-redux';
 import { store } from './../store';
+import OnboardGuideProvider from '../providers/OnboardGuideProvider';
 
 export default function App({ Component, pageProps }: AppProps) {
   const [queryClient] = useState(() => new QueryClient());
@@ -11,7 +12,9 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <Provider store={store}>
       <QueryClientProvider client={queryClient}>
-        <Component {...pageProps} />
+        <OnboardGuideProvider>
+          <Component {...pageProps} />
+        </OnboardGuideProvider>
       </QueryClientProvider>
     </Provider>
   )
