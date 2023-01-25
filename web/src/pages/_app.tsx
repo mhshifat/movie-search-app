@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { Provider } from 'react-redux';
 import { store } from './../store';
 import OnboardGuideProvider from '../providers/OnboardGuideProvider';
+import PopupProvider from './../providers/PopupProvider';
 
 export default function App({ Component, pageProps }: AppProps) {
   const [queryClient] = useState(() => new QueryClient());
@@ -12,9 +13,11 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <Provider store={store}>
       <QueryClientProvider client={queryClient}>
-        <OnboardGuideProvider>
-          <Component {...pageProps} />
-        </OnboardGuideProvider>
+        <PopupProvider>  
+          <OnboardGuideProvider>
+            <Component {...pageProps} />
+          </OnboardGuideProvider>
+        </PopupProvider>
       </QueryClientProvider>
     </Provider>
   )

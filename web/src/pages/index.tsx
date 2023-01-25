@@ -2,11 +2,11 @@ import { useCallback, useRef } from 'react';
 import Page from '../components/common/Page';
 import Tab from '../components/common/Tab';
 import MovieList from '../components/modules/movies/MovieList';
-import { useOnboardGuide } from '../providers/OnboardGuideProvider';
+import { usePopup } from '../providers/PopupProvider';
 
 export default function Home() {
   const contentBodyRef = useRef<any>();
-  const { startFromGuide } = useOnboardGuide();
+  const { setTriggerRef, showPopup } = usePopup();
 
   const scrollToTop = useCallback(() => {
     contentBodyRef.current?.scrollTo({top: 0, behavior: 'smooth'});
@@ -20,8 +20,14 @@ export default function Home() {
         ]}
       />
       <div>
-        <div className='skeletonDemo' onClick={() => {
-          startFromGuide(1);
+        <div ref={setTriggerRef} className='skeletonDemo' onClick={() => {
+          showPopup({
+            content: (
+              <div>
+                <p>Welcome to my tooltip.Welcome to my tooltip.Welcome to my tooltip.Welcome to my tooltip.Welcome to my tooltip.</p>
+              </div>
+            ),
+          });
         }}>
           <img src="" className='loading' style={{ height: "10em", width: "100%" }} />
           <div style={{ padding: "1em 1.8em", display: "flex", flexDirection: "column", gap: "1em" }}>
